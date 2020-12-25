@@ -10,15 +10,15 @@
 
 * [Ques 5](#ques-5-find-the-countries-that-start-with-c-and-end-with-ia)
 
-* [Ques 6]()
+* [Ques 6](#ques-6-find-the-country-that-has-oo-in-the-name)
 
-* [Ques 7]()
+* [Ques 7](#ques-7-find-the-countries-that-have-three-or-more-a-in-the-name)
 
-* [Ques 8]()
+* [Ques 8](#ques-8-find-the-countries-that-have-t-as-the-second-character)
 
-* [Ques 9]()
+* [Ques 9](#ques-9-find-the-countries-that-have-two-o-characters-separated-by-two-others)
 
-* [Ques 10]()
+* [Ques 10](#ques-10-find-the-countries-that-have-exactly-four-characters)
 
 * [Ques 11]()
 
