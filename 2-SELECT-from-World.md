@@ -6,7 +6,7 @@
 
 * [Ques 3](#ques-3-give-the-name-and-the-per-capita-gdp-for-those-countries-with-a-population-of-at-least-200-million)
 
-* [Ques 4](#ques-4-show-the-name-and-population-in-millions-for-the-countries-of-the-continent-south-america-divide-the-population-by-1000000-to-get-population-in-millions)
+* [Ques 4](#ques-4-show-the-name-and-population-in-millions-for-the-countries-of-the-continent-south-america)
 
 * [Ques 5](#ques-5-show-the-name-and-population-for-france-germany-italy)
 
@@ -37,7 +37,7 @@ FROM world
 WHERE population >= 200000000
 ```
 
-### Ques 4. Show the name and population in millions for the countries of the continent 'South America'. Divide the population by 1000000 to get population in millions
+### Ques 4. Show the name and population in millions for the countries of the continent 'South America'
 
 ```sql
 SELECT name, population/1000000 AS "population(in millions)"
