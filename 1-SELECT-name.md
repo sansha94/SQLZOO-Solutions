@@ -20,15 +20,14 @@
 
 * [Ques 10](#ques-10-find-the-countries-that-have-exactly-four-characters)
 
-* [Ques 11]()
+* [Ques 11](#ques-11-find-the-country-where-the-name-is-the-capital-city)
 
-* [Ques 12]()
+* [Ques 12](#ques-12-find-the-country-where-the-capital-is-the-country-plus-city)
+* [Ques 13](#ques-13-find-the-capital-and-the-name-where-the-capital-includes-the-name-of-the-country)
 
-* [Ques 13]()
+* [Ques 14](#ques-14-find-the-capital-and-the-name-where-the-capital-is-an-extension-of-name-of-the-country)
 
-* [Ques 14]()
-
-* [Ques 15]()
+* [Ques 15](#ques-15-show-the-name-and-the-extension-where-the-capital-is-an-extension-of-name-of-the-country)
 
 ### Ques 1. Find the country that start with Y
 
