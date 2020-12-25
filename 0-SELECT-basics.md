@@ -2,7 +2,7 @@
 
 * [Ques 1](#ques-1-modify-it-to-show-the-population-of-germany)
 
-* [Ques 2](#ques-2-show-the-name-and-the-population-for-sweden-norway-and-denmark")
+* [Ques 2](#ques-2-show-the-name-and-the-population-for-sweden-norway-and-denmark)
 
 * [Ques 3](#ques-3-modify-it-to-show-the-country-and-the-area-for-countries-with-an-area-between-200000-and-250000)
 
