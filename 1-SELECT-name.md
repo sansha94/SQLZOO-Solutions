@@ -138,5 +138,5 @@ WHERE capital LIKE concat(name, '_%')
 ```sql
 SELECT name, REPLACE(capital, name, '')
 FROM world
-WHERE capital LIKE concat(name, '_%');
+WHERE capital LIKE concat(name, '_%')
 ```
