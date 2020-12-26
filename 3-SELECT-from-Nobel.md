@@ -20,6 +20,14 @@
 
 * [Ques 10](#ques-10-show-year-subject-and-name-of-people-who-won-a-medicine-prize-in-an-early-year-before-1910-not-including-1910-together-with-winners-of-a-literature-prize-in-a-later-year-after-2004-including-2004)
 
+* [Ques 11](#ques-11-find-all-details-of-the-prize-won-by-peter-grünberg)
+
+* [Ques 12](#ques-12-find-all-details-of-the-prize-won-by-eugene-oneill)
+
+* [Ques 13](#ques-13-list-the-winners-year-and-subject-where-the-winner-starts-with-sir-show-the-the-most-recent-first-then-by-name-order)
+
+* [Ques 14](#ques-14-show-the-1984-winners-and-subject-ordered-by-subject-and-winner-name-but-list-chemistry-and-physics-last)
+
 ### Ques 1. Change the query shown so that it displays Nobel prizes for 1950
 
 ```sql
