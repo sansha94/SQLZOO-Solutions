@@ -14,10 +14,10 @@
 
 * [Ques 7](#ques-7-show-the-countries-that-are-big-by-area-or-big-by-population-show-name-population-and-area)
 
-* [Ques 8]('ques-8-show-the-countries-that-are-big-by-area-more-than-3-million-or-big-by-population-more-than-250-million-but-not-both-show-name-population-and-area')
+* [Ques 8](#ques-8-show-the-countries-that-are-big-by-area-more-than-3-million-or-big-by-population-more-than-250-million-but-not-both-show-name-population-and-area)
 
   * [Using XOR Operator](#a-using-xor-operator)
-    
+
   * [Without using XOR Operator](#b-without-using-xor-operator)
 
 * [Ques 9](#ques-9-show-the-name-and-population-in-millions-and-the-gdp-in-billions-for-the-countries-of-the-continent-south-america)
