@@ -1,3 +1,15 @@
+## Questions Index
+
+* [Ques 1](#ques-1-change-the-query-shown-so-that-it-displays-nobel-prizes-for-1950)
+
+* [Ques 2](#ques-2-show-who-won-the-1962-prize-for-literature)
+
+* [Ques 3](#ques-3-show-the-year-and-subject-that-won-albert-einstein-his-prize)
+
+* [Ques 4](#ques-4-give-the-name-of-the-peace-winners-since-the-year-2000-including-2000)
+
+* [Ques 5](#ques-5-show-all-details-yr-subject-winner-of-the-literature-prize-winners-for-1980-to-1989-inclusive)
+
 ### Ques 1. Change the query shown so that it displays Nobel prizes for 1950
 
 ```sql
