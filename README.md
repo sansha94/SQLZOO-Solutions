@@ -14,4 +14,4 @@ Solution of the questions available on https://sqlzoo.net/
 ### Disclaimer
 
 * Written with :heart: during Christmas holidays :santa: :christmas_tree: :deer: 
-* If you find any discrepancy in the SQL queries for any question feel free :slightly_smiling_face: to raise a issue.
+* If you find any discrepancy in the SQL queries for any question feel free :slightly_smiling_face: to raise an issue.
