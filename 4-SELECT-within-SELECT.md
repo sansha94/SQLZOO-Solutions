@@ -6,6 +6,8 @@
 
 * [Ques 4](#ques-4-which-country-has-a-population-that-is-more-than-canada-but-less-than-poland-show-the-name-and-the-population)
 
+* [Ques 5](#ques-5-show-the-name-and-the-population-of-each-country-in-europe-show-the-population-as-a-percentage-of-the-population-of-germany)
+
 ### Ques 1. List each country name where the population is larger than that of 'Russia'
 
 ```sql
@@ -46,4 +48,22 @@ WHERE population > (
 		FROM world
 		WHERE name IN ('Poland')
 		)
+```
+
+### Ques 5. Show the name and the population of each country in Europe. Show the population as a percentage of the population of Germany
+
+```sql
+SELECT name
+	,CONCAT (
+		ROUND((
+				population / (
+					SELECT population
+					FROM world
+					WHERE name = 'Germany'
+					) * 100
+				))
+		,'%'
+		)
+FROM world
+WHERE continent = 'Europe'
 ```
