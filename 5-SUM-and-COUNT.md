@@ -2,7 +2,7 @@
 
 * [Ques 1](#ques-1-show-the-total-population-of-the-world)
 
-* [Ques 2](#ques-2-list-all-the-continents--just-once-each)
+* [Ques 2](#ques-2-list-all-the-continents---just-once-each)
 
 * [Ques 3](#ques-3-give-the-total-gdp-of-africa)
 
