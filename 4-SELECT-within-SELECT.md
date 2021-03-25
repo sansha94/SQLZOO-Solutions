@@ -14,6 +14,8 @@
 
 * [Ques 7](#ques-7-find-the-largest-country-by-area-in-each-continent-show-the-continent-the-name-and-the-area)
 
+* [Ques 9](#ques-9-find-the-continents-where-all-countries-have-a-population-<=-25000000-then-find-the-names-of-the-countries-associated-with-these-continents-show-name-continent-and-population)
+
 
 ### Ques 1. List each country name where the population is larger than that of 'Russia'
 
@@ -103,4 +105,15 @@ WHERE gdp > (SELECT max(gdp) FROM world WHERE continent  = 'Europe')
 SELECT continent, name, area
 FROM world
 WHERE area IN (SELECT max(area) FROM world GROUP BY continent)
+```
+
+### Ques 9. Find the continents where all countries have a population <= 25000000. Then find the names of the countries associated with these continents. Show name, continent and population.
+
+```sql
+SELECT name, continent, population FROM world
+WHERE continent NOT IN (
+	SELECT continent
+	FROM world
+	WHERE population > 25000000
+)
 ```
