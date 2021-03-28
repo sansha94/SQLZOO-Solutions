@@ -14,6 +14,8 @@
 
 * [Ques 7](#ques-7-find-the-largest-country-by-area-in-each-continent-show-the-continent-the-name-and-the-area)
 
+* [Ques 8](#ques-8-list-each-continent-and-the-name-of-the-country-that-comes-first-alphabetically)
+
 * [Ques 9](#ques-9-find-the-continents-where-all-countries-have-a-population--25000000-then-find-the-names-of-the-countries-associated-with-these-continents-show-name-continent-and-population)
 
 
@@ -107,6 +109,15 @@ FROM world
 WHERE area IN (SELECT max(area) FROM world GROUP BY continent)
 ```
 
+### Ques 8. List each continent and the name of the country that comes first alphabetically.
+
+```sql
+SELECT continent, MIN(name) as name
+FROM world
+GROUP BY continent
+ORDER BY continent
+```
+
 ### Ques 9. Find the continents where all countries have a population <= 25000000. Then find the names of the countries associated with these continents. Show name, continent and population.
 
 ```sql
@@ -117,3 +128,5 @@ WHERE continent NOT IN (
 	WHERE population > 25000000
 )
 ```
+
+### Ques 10. 
