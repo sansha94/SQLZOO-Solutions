@@ -18,6 +18,8 @@
 
 * [Ques 9](#ques-9-find-the-continents-where-all-countries-have-a-population--25000000-then-find-the-names-of-the-countries-associated-with-these-continents-show-name-continent-and-population)
 
+* [Ques 10](#ques-10-some-countries-have-populations-more-than-three-times-that-of-any-of-their-neighbours-in-the-same-continent-give-the-countries-and-continents)
+
 
 ### Ques 1. List each country name where the population is larger than that of 'Russia'
 
@@ -129,4 +131,14 @@ WHERE continent NOT IN (
 )
 ```
 
-### Ques 10. 
+### Ques 10. Some countries have populations more than three times that of any of their neighbours (in the same continent). Give the countries and continents.
+
+```sql
+SELECT x.name, continent
+FROM world x
+WHERE x.population / 3 > ALL (
+	SELECT y.population
+	FROM world y
+	WHERE x.continent=y.continent AND x.name != y.name
+)
+```
