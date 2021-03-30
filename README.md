@@ -25,4 +25,6 @@ The work on this repo was started during Christmas :christmas_tree: holidays and
 
 * [3 SELECT from Nobel](https://github.com/sank3t/SQLZOO-Solutions/blob/main/3-SELECT-from-Nobel.md)
 
+* [4 SELECT within SELECT](https://github.com/sank3t/SQLZOO-Solutions/blob/main/4-SELECT-within-SELECT.md)
+
 * [5 SUM and COUNT](https://github.com/sank3t/SQLZOO-Solutions/blob/main/5-SUM-and-COUNT.md)
