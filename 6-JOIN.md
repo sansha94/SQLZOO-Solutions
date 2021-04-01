@@ -14,6 +14,12 @@
 
 * [Ques 7](#ques-7-list-the-player-for-every-goal-scored-in-a-game-where-the-stadium-was-national-stadium-warsaw)
 
+* [Ques 8](#ques-8-show-the-name-of-all-players-who-scored-a-goal-against-germany)
+
+* [Ques 9](#ques-9-show-teamname-and-the-total-number-of-goals-scored)
+
+* [Ques 10](#ques-10-show-the-stadium-and-the-number-of-goals-scored-in-each-stadium)
+
 
 ### Ques 1. Show the matchid and player name for all goals scored by Germany.
 
@@ -74,4 +80,31 @@ SELECT player
 FROM goal g1
 JOIN game g2 ON (g1.matchid = g2.id)
 WHERE stadium = 'National Stadium, Warsaw'
+```
+
+### Ques 8. Show the name of all players who scored a goal against Germany.
+
+```sql
+SELECT DISTINCT player
+FROM game JOIN goal ON (id = matchid)
+WHERE teamid <> 'GER' AND (team1 = 'GER' OR team2='GER')
+```
+
+### Ques 9. Show teamname and the total number of goals scored.
+
+```sql
+SELECT teamname, COUNT(teamid) AS total_goals
+FROM goal
+JOIN eteam ON (teamid = id)
+GROUP BY teamname
+ORDER BY total_goals DESC
+```
+
+### Ques 10. Show the stadium and the number of goals scored in each stadium.
+
+```sql
+SELECT stadium, COUNT(stadium) as total_goals_scored
+FROM game JOIN goal ON (id=matchid)
+GROUP BY stadium
+ORDER BY total_goals_scored DESC
 ```
