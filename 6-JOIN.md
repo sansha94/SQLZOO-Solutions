@@ -24,6 +24,8 @@
 
 * [Ques 12](#ques-12-for-every-match-where-ger-scored-show-matchid-match-date-and-the-number-of-goals-scored-by-ger)
 
+* [Ques 13](#ques-13-list-every-match-with-the-goals-scored-by-each-team-sort-your-result-by-mdate-matchid-team1-and-team2)
+
 
 ### Ques 1. Show the matchid and player name for all goals scored by Germany.
 
@@ -90,7 +92,8 @@ WHERE stadium = 'National Stadium, Warsaw'
 
 ```sql
 SELECT DISTINCT player
-FROM game JOIN goal ON (id = matchid)
+FROM game
+JOIN goal ON (id = matchid)
 WHERE teamid <> 'GER' AND (team1 = 'GER' OR team2='GER')
 ```
 
@@ -108,7 +111,8 @@ ORDER BY total_goals DESC
 
 ```sql
 SELECT stadium, COUNT(stadium) as total_goals_scored
-FROM game JOIN goal ON (id=matchid)
+FROM game
+JOIN goal ON (id=matchid)
 GROUP BY stadium
 ORDER BY total_goals_scored DESC
 ```
@@ -117,7 +121,8 @@ ORDER BY total_goals_scored DESC
 
 ```sql
 SELECT id, mdate, COUNT(id) as total_goals
-FROM game JOIN goal ON id = matchid
+FROM game
+JOIN goal ON (id = matchid)
 WHERE team1 = 'POL' or team2 = 'POL'
 GROUP BY id, mdate
 ```
@@ -126,7 +131,22 @@ GROUP BY id, mdate
 
 ```sql
 SELECT id, mdate, COUNT(id) as total_goals
-FROM game JOIN goal ON id = matchid
+FROM game
+JOIN goal ON (id = matchid)
 WHERE teamid = 'GER'
 GROUP BY id, mdate
+```
+
+### Ques 13. List every match with the goals scored by each team. Sort your result by mdate, matchid, team1 and team2.
+
+```sql
+SELECT mdate,
+       team1,
+       SUM(CASE WHEN teamid=team1 THEN 1 ELSE 0 END) score1,
+       team2,
+       SUM(CASE WHEN teamid=team2 THEN 1 ELSE 0 END) score2
+FROM game
+LEFT JOIN goal ON (id = matchid)
+GROUP BY mdate, matchid, team1, team2
+ORDER BY mdate, matchid, team1, team2
 ```
