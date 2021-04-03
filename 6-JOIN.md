@@ -20,6 +20,10 @@
 
 * [Ques 10](#ques-10-show-the-stadium-and-the-number-of-goals-scored-in-each-stadium)
 
+* [Ques 11](#ques-11-for-every-match-involving-pol-show-the-matchid-date-and-the-number-of-goals-scored)
+
+* [Ques 12](#ques-12-for-every-match-where-ger-scored-show-matchid-match-date-and-the-number-of-goals-scored-by-ger)
+
 
 ### Ques 1. Show the matchid and player name for all goals scored by Germany.
 
@@ -107,4 +111,22 @@ SELECT stadium, COUNT(stadium) as total_goals_scored
 FROM game JOIN goal ON (id=matchid)
 GROUP BY stadium
 ORDER BY total_goals_scored DESC
+```
+
+### Ques 11. For every match involving 'POL', Show the matchid, date and the number of goals scored.
+
+```sql
+SELECT id, mdate, COUNT(id) as total_goals
+FROM game JOIN goal ON id = matchid
+WHERE team1 = 'POL' or team2 = 'POL'
+GROUP BY id, mdate
+```
+
+### Ques 12. For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'.
+
+```sql
+SELECT id, mdate, COUNT(id) as total_goals
+FROM game JOIN goal ON id = matchid
+WHERE teamid = 'GER'
+GROUP BY id, mdate
 ```
