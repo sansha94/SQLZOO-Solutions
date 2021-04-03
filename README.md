@@ -28,3 +28,5 @@ The work on this repo was started during Christmas :christmas_tree: holidays and
 * [4 SELECT within SELECT](https://github.com/sank3t/SQLZOO-Solutions/blob/main/4-SELECT-within-SELECT.md)
 
 * [5 SUM and COUNT](https://github.com/sank3t/SQLZOO-Solutions/blob/main/5-SUM-and-COUNT.md)
+
+* [6 JOIN](https://github.com/sank3t/SQLZOO-Solutions/blob/main/6-JOIN.md)
