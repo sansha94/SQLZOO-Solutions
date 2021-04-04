@@ -16,7 +16,7 @@
 
 * [Ques 8](#ques-8-list-the-films-in-which-harrison-ford-has-appeared)
 
-* [Ques 9](#ques-9-list-the-films-where-harrison-ford-has-appeared--but-not-in-the-starring-role)
+* [Ques 9](#ques-9-list-the-films-where-harrison-ford-has-appeared---but-not-in-the-starring-role)
 
 * [Ques 10](#ques-10-list-the-films-together-with-the-leading-star-for-all-1962-films)
 
