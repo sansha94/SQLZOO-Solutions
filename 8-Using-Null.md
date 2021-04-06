@@ -14,6 +14,8 @@
 
 * [Ques 7](#ques-7-use-count-to-show-the-number-of-teachers-and-the-number-of-mobile-phones)
 
+* [Ques 8](#ques-8-use-count-and-group-by-deptname-to-show-each-department-and-the-number-of-staff-use-a-right-join-to-ensure-that-the-engineering-department-is-listed)
+
 
 ### Ques 1. List the teachers who have NULL for their department.
 
@@ -68,4 +70,14 @@ LEFT JOIN dept d ON (t.dept = d.id)
 SELECT COUNT(name) AS total_teachers,
        COUNT(mobile) AS total_mobiles
 FROM teacher
+```
+
+### Ques 8. Use COUNT and GROUP BY dept.name to show each department and the number of staff. Use a RIGHT JOIN to ensure that the Engineering department is listed.
+
+```sql
+SELECT dept.name as department,
+       COUNT(teacher.name) AS total_teachers
+FROM teacher
+RIGHT JOIN dept ON (teacher.dept=dept.id)
+GROUP BY dept.name
 ```
