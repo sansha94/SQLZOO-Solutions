@@ -16,6 +16,10 @@
 
 * [Ques 8](#ques-8-use-count-and-group-by-deptname-to-show-each-department-and-the-number-of-staff-use-a-right-join-to-ensure-that-the-engineering-department-is-listed)
 
+* [Ques 9](#ques-9-use-case-to-show-the-name-of-each-teacher-followed-by-sci-if-the-teacher-is-in-dept-1-or-2-and-art-otherwise)
+
+* [Ques 10](#ques-10-use-case-to-show-the-name-of-each-teacher-followed-by-sci-if-the-teacher-is-in-dept-1-or-2-show-art-if-the-teachers-dept-is-3-and-none-otherwise)
+
 
 ### Ques 1. List the teachers who have NULL for their department.
 
@@ -80,4 +84,30 @@ SELECT dept.name as department,
 FROM teacher
 RIGHT JOIN dept ON (teacher.dept=dept.id)
 GROUP BY dept.name
+```
+
+### Ques 9. Use CASE to show the name of each teacher followed by 'Sci' if the teacher is in dept 1 or 2 and 'Art' otherwise.
+
+```sql
+SELECT t.name,
+       CASE WHEN t.dept IN (1, 2)
+            THEN 'Sci'
+            ELSE 'Art'
+       END AS department
+FROM teacher t
+LEFT JOIN dept d ON (t.dept=d.id)
+```
+
+### Ques 10. Use CASE to show the name of each teacher followed by 'Sci' if the teacher is in dept 1 or 2, show 'Art' if the teacher's dept is 3 and 'None' otherwise.
+
+```sql
+SELECT t.name,
+       CASE WHEN t.dept IN (1, 2)
+            THEN 'Sci'
+            WHEN t.dept = 3
+            THEN 'Art'
+            ELSE 'None'
+        END AS department
+FROM teacher t
+LEFT JOIN dept d ON (t.dept=d.id)
 ```
