@@ -32,3 +32,5 @@ The work on this repo was started during Christmas :christmas_tree: holidays and
 * [6 JOIN](https://github.com/sank3t/SQLZOO-Solutions/blob/main/6-JOIN.md)
 
 * [7 More JOIN operations](https://github.com/sank3t/SQLZOO-Solutions/blob/main/7-More-JOIN-operations.md)
+
+* [8 Using Null](https://github.com/sank3t/SQLZOO-Solutions/blob/main/8-Using-Null.md)
