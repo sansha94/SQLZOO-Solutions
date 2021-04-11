@@ -10,6 +10,8 @@
 
 * [Ques 5](#ques-5-show-the-subject-and-total-number-of-students-who-a_strongly_agree-to-question-22-for-each-of-the-subjects-8-computer-science-and-h-creative-arts-and-design)
 
+* [Ques 6](#ques-6-show-the-percentage-of-students-who-a_strongly_agree-to-question-22-for-the-subject-8-computer-science-show-the-same-figure-for-the-subject-h-creative-arts-and-design)
+
 
 ### Ques 1. Show the the percentage who STRONGLY AGREE.
 
@@ -53,6 +55,18 @@ GROUP BY subject
 
 ```sql
 SELECT subject, SUM(response*A_STRONGLY_AGREE/100) AS total_students
+FROM nss
+WHERE subject IN ('(8) Computer Science', '(H) Creative Arts and Design')
+  AND question='Q22'
+GROUP BY subject
+```
+
+
+### Ques 6. Show the percentage of students who A_STRONGLY_AGREE to question 22 for the subject '(8) Computer Science' show the same figure for the subject '(H) Creative Arts and Design'.
+
+```sql
+SELECT subject,
+       ROUND(SUM(response*A_STRONGLY_AGREE/100) * 100 / SUM(response), 1) AS agreed_students_percentage
 FROM nss
 WHERE subject IN ('(8) Computer Science', '(H) Creative Arts and Design')
   AND question='Q22'
