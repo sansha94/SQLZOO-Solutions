@@ -12,6 +12,10 @@
 
 * [Ques 6](#ques-6-show-the-percentage-of-students-who-a_strongly_agree-to-question-22-for-the-subject-8-computer-science-show-the-same-figure-for-the-subject-h-creative-arts-and-design)
 
+* [Ques 7](#ques-7-show-the-average-scores-for-question-q22-for-each-institution-that-include-manchester-in-the-name)
+
+* [Ques 8](#ques-8-show-the-institution-the-total-sample-size-and-the-number-of-computing-students-for-institutions-in-manchester-for-q01)
+
 
 ### Ques 1. Show the the percentage who STRONGLY AGREE.
 
@@ -71,4 +75,27 @@ FROM nss
 WHERE subject IN ('(8) Computer Science', '(H) Creative Arts and Design')
   AND question='Q22'
 GROUP BY subject
+```
+
+### Ques 7. Show the average scores for question 'Q22' for each institution that include 'Manchester' in the name.
+
+```sql
+SELECT institution,
+       ROUND(SUM(score * response) / SUM(response), 1)
+FROM nss
+WHERE question='Q22'
+  AND institution LIKE '%Manchester%'
+GROUP BY institution
+```
+
+### Ques 8. Show the institution, the total sample size and the number of computing students for institutions in Manchester for 'Q01'.
+
+```sql
+SELECT institution,
+       SUM(sample) AS total_sample,
+       SUM(CASE WHEN subject='(8) Computer Science' THEN sample ELSE 0 END) AS computing_students
+FROM nss
+WHERE question='Q01'
+  AND (institution LIKE '%Manchester%')
+GROUP BY institution
 ```
