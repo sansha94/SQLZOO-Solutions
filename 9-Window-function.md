@@ -10,6 +10,8 @@
 
 * [Ques 5](#ques-5-show-the-parties-that-won-for-each-edinburgh-constituency-in-2017)
 
+* [Ques 6](#ques-6-show-how-many-seats-for-each-party-in-scotland-in-2017-scottish-constituencies-start-with-s)
+
 
 ### Ques 1. Show the lastName, party and votes for the constituency 'S14000024' in 2017.
 
@@ -62,4 +64,19 @@ FROM (SELECT constituency,party, votes,
             AND yr  = 2017
      ) ranked_parties
 WHERE ranked_parties.posn = 1
+```
+
+
+### Ques 6. Show how many seats for each party in Scotland in 2017. Scottish constituencies start with 'S'.
+
+```sql
+SELECT party, COUNT(party)
+FROM (SELECT constituency,party, votes,
+             RANK() OVER (PARTITION BY constituency ORDER BY votes DESC) as posn
+      FROM ge
+      WHERE constituency LIKE ('S%')
+            AND yr  = 2017
+     ) ranked_parties
+WHERE ranked_parties.posn = 1
+GROUP BY party
 ```
