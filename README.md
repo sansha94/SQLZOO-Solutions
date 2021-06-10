@@ -36,3 +36,5 @@ The work on this repo was started during Christmas :christmas_tree: holidays and
 * [8 Using Null](https://github.com/sank3t/SQLZOO-Solutions/blob/main/8-Using-Null.md)
 
 * [8+ Numeric Examples](https://github.com/sank3t/SQLZOO-Solutions/blob/main/8%2B-Numeric-Examples.md)
+
+* [9- Window function](https://github.com/sank3t/SQLZOO-Solutions/blob/main/9-Window-function.md)
